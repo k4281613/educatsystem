@@ -1,0 +1,65 @@
+{
+  "name": "wang-backstage-server-v1",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "dependencies": {
+    "async": "^2.6.2",
+    "await-stream-ready": "^1.0.1",
+    "axios": "^0.18.0",
+    "bluebird": "^3.5.1",
+    "bufferhelper": "^0.2.1",
+    "cheerio": "^1.0.0-rc.2",
+    "crypto": "^1.0.1",
+    "egg": "^2.0.0",
+    "egg-cors": "^2.0.0",
+    "egg-mysql": "^3.0.0",
+    "egg-scripts": "^2.1.0",
+    "iconv-lite": "^0.4.23",
+    "koa-multer": "^1.0.2",
+    "md5": "^2.2.1",
+    "qn": "^1.3.0",
+    "sha1": "^1.1.1",
+    "stream-wormhole": "^1.1.0",
+    "superagent": "^3.8.3",
+    "superagent-charset": "^1.2.0"
+  },
+  "devDependencies": {
+    "archiver": "^3.0.0",
+    "autod": "^3.0.1",
+    "autod-egg": "^1.0.0",
+    "egg-bin": "^4.3.5",
+    "egg-ci": "^1.8.0",
+    "egg-mock": "^3.13.0",
+    "egg-redis": "^2.3.0",
+    "egg-socket.io": "^4.1.5",
+    "eslint": "^4.11.0",
+    "eslint-config-egg": "^5.1.0",
+    "silly-datetime": "^0.1.2",
+    "webstorm-disable-index": "^1.2.0"
+  },
+  "engines": {
+    "node": ">=8.9.0"
+  },
+  "scripts": {
+    "start": "egg-scripts start --daemon --sticky",
+    "stop": "egg-scripts stop",
+    "dev": "egg-bin dev --port 7002 --sticky",
+    "debug": "egg-bin debug",
+    "test": "npm run lint -- --fix && npm run test-local",
+    "test-local": "egg-bin test",
+    "cov": "egg-bin cov",
+    "lint": "eslint .",
+    "ci": "npm run lint && npm run cov",
+    "autod": "autod"
+  },
+  "ci": {
+    "version": "8"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "author": "zrx",
+  "license": "MIT"
+}
